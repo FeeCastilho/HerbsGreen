@@ -1,3 +1,13 @@
+body {
+ 
+  background-image: url("Imagens/Planta.svg  ");
+  background-repeat: repeat;
+  background-size: 150px; 
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
 
 
 :root {
@@ -17,7 +27,22 @@
     scroll-behavior: smooth;
   }
 
+  @media (min-width: 992px) {
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      background: transparent;
+    }
+  }
+  
+  .navbar {
+    background: transparent !important;
+  }
 
+  
 
   nav .navbar-brand {
     color: var(--button-color);
@@ -25,6 +50,7 @@
     font-size: 1.8rem;
     font-weight: 700; 
     transition: color 0.3s ease;
+    
 }
 
 nav .navbar-brand:hover {
@@ -50,6 +76,9 @@ nav .navbar-brand:hover {
     padding-bottom: 2px; 
     transition: color 0.3s ease; 
     white-space: nowrap;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1.5px;
 }
 
 .navbar-nav li a::after {
@@ -77,10 +106,21 @@ nav .navbar-brand:hover {
     }
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    backdrop-filter: blur(4px); 
+  }
+
+  .navbar-nav .nav-link {
+    color: #135536 !important;
+    font-weight: bold;
+  }
+}
 
 #Inicio {
     font-family: 'Lora', serif;
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -103,28 +143,29 @@ nav .navbar-brand:hover {
     max-width: 600px;
 }
 
-#button {
-    display: inline-block;
+.button {
     border-radius: 4px;
     border: none;
     color: #FFFFFF;
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
+    white-space: nowrap;
+    margin-right: 20px
   }
 
-  #button:hover {
+  .button:hover {
     background-color: var(--button-color-dark);
   }
   
-  #button span {
+  .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  #button span:after {
+  .button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -133,13 +174,52 @@ nav .navbar-brand:hover {
     transition: 0.5s;
   }
   
-  #button:hover span {
+  .button:hover span {
     padding-right: 25px;
   }
   
-  #button:hover span:after {
+  .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("Imagens/criancas.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 60, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-section .content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .hero-section h1, 
+  .hero-section p, 
+  .hero-section a {
+    color: white;
+  }
+  
+  .hero-section p {
+    color: #dcdcdc;
+    font-size: 20px;
   }
 
   #sobre h2 {
@@ -171,6 +251,30 @@ nav .navbar-brand:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+.linha-decorativa {
+  position: absolute;
+  top: -50px;    
+  left: -80px;   
+  width: 200px;
+  height: 300px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.linha-decorativa svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icone-plantinha {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  width: 40px;
+}
+
 
 #btnTop {
     position: fixed;
@@ -219,8 +323,17 @@ nav .navbar-brand:hover {
     color: #1a1a1a;
 }
 
+#Produtos h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(47%) sepia(94%) saturate(420%) hue-rotate(85deg) brightness(90%) contrast(90%);
 }
+
 
