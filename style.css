@@ -143,6 +143,30 @@ nav .navbar-brand:hover {
     max-width: 600px;
 }
 
+@media (min-width: 992px) {
+  .button {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .button {
+    display: inline-block;
+    width: auto;               
+    max-width: 90%;            
+    padding: 0.8rem 2rem;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  .button span {
+    font-size: 1.2rem;
+  }
+
+}
+
+
 .button {
     border-radius: 4px;
     border: none;
@@ -151,7 +175,6 @@ nav .navbar-brand:hover {
     transition: all 0.5s;
     cursor: pointer;
     white-space: nowrap;
-    margin-right: 20px
   }
 
   .button:hover {
